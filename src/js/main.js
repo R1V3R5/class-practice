@@ -15,7 +15,7 @@
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 class Foo {
-  constructor (){
+  constructor() {
 
   }
 }
@@ -40,7 +40,7 @@ console.assert(foo instanceof Foo);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 class Dog {
-  constructor () {
+  constructor() {
     this.says = 'life is ruff';
   }
 }
@@ -96,8 +96,8 @@ console.assert(cat.growl() === "meow");
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 class KeepSecret {
-  constructor (_secret) {
-    this.getSecret = function (){
+  constructor(_secret) {
+    this.getSecret = function () {
       return _secret;
     }
   }
@@ -134,17 +134,20 @@ console.assert(dontTellNobody.squeal() === mySecret);
 
 // -- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ - Your Answer - ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ -- //
 class Key {
-  constructor () {
+  constructor() {
 
   }
 }
 
 class Safe {
-  constructor (x, y) {
-
+  constructor(safeData, key) {
+    this.safeData = safeData;
+    this.key = key;
   }
-  unlock () {
-
+  unlock(key) {
+    if (key === this.key) {
+      return this.safeData;
+    }
   }
 }
 
@@ -154,9 +157,9 @@ class Safe {
 // ==== Validating =============================================== //
 
 let sensitive = "shhhhh!";
-let rightKey  = new Key();
-let wrongKey  = new Key();
-let safe      = new Safe(sensitive, rightKey);
+let rightKey = new Key();
+let wrongKey = new Key();
+let safe = new Safe(sensitive, rightKey);
 
 console.assert(safe.unlock(wrongKey) !== sensitive);
 console.assert(safe.unlock(rightKey) === sensitive);
