@@ -1,55 +1,18 @@
-# Installation
+## Objectives
 
-#### Prerequisites
+* Obtain further knowledge of how Constructors & Prototypes work, while utilizing the newer Class syntax.
 
-Make sure you have an up to date installation of `npm`
-with `brew update` followed by either `brew install npm` or `brew upgrade npm`.
+## Normal Mode
 
-Then use npm to install the following apps with `npm install -g $APP_NAME`
-* `gulp-cli`
-* `surge`
+In the example file below make sure you name each class differently as to not override each other. I need to be able to test them deployed on the console. Also make sure there are no JavaScript errors and check your code. Finally make sure it is formatted/indented correctly. Code is in place that validates each answer. It will currently say: `Assertion failed` for each question. Once you answer the question correctly that will go away. Use this to check your work.
 
-Finally, I would strongly encourage you to install the `newapp` script from [here][newapp].
+1. Copy the contents of the source file below into YOUR OWN `main.js` file.
+2. Complete each question (and the bonus if you want)
+3. Deploy the application to Surge.
 
-[newapp]: https://gist.github.com/kingcons/a25733c233faf10847cbb4ff557e6843
+## Deliverables
 
-# Usage
+1. Submit your Github Repo URL
+2. Deploy to Surge.sh and put a link in your `Readme.md` file
 
-#### If you are using the `newapp` tool
-
-*NOTE:* If you do not use a lowercased project/folder name, the automatic deploy to surge with `npm run deploy` will fail as surge.sh always expects lowercased names.
-
-1. Run `$ newapp template <project name>`
-2. Change in to your new project
-3. Initialize Git `$ git init`
-4. Build
-
-#### If you are NOT using the `newapp` tool
-
-1. Clone down this repo
-2. Rename and change into the project folder
-3. Remove `git` from it `$ rm -rf .git`
-4. Initialize Git `$ git init`
-5. Install the dependencies `$ npm install`
-6. Build 
-
-
-# Features
-
-This template features a couple different tools. First it utalizes both NPM and Gulp for different tasks.
-
-## Gulp Tasks
-
-All tasks are listed below, but ideally you will just need to run `gulp start` and be done with it.
-
-- `gulp start`: This is the primary task that will fire up the server and allow you to start building
-- `gulp server`: This will start a Browsersync server with live-reload
-- `gulp sass`: This will compile your SASS
-- `gulp browserify`: This will transpile your JS from ES6 to ES5
-- `gulp watch`: This will start a watcher for files
-
-## NPM Scripts
-
-- `npm run test`: This will launch Mocha in your terminal and run any tests
-- `npm run deploy`: This will deploy your application to Surge.sh for you
-- `npm run lint`: This will run ESLint on your `/src/js` folder
+[SURGE!](http://tiy-joshuarivers-class-practice.surge.sh)
